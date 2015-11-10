@@ -7,22 +7,32 @@ CloudFleet Documentation
 ========================
 
 Welcome to the CloudFleet Documentation! Let's try to help you get started as
-soon as possible. Do you have your CloudFleet Blimp? If not, then you should
-`order`_ it now.
+soon as possible. Do you have your CloudFleet Blimp? If not, then you can
+`order`_ it now. You can also use your existing device, such as a Raspberry Pi.
 
 .. _order: https://cloudfleet.io/
+
+If you're new here, we recommend that you start by reading
+the `Getting Started guide <doc/quickstart/quickstart.html>`_.
 
 Table of Contents
 -----------------
 
+Quick Start:
+
 .. toctree::
    :maxdepth: 2
 
+   doc/quickstart/quickstart
+   doc/quickstart/quickstart-hackers
 
+Documentation:
 
-Indices and tables
-==================
+.. Add other more detailed topics here like:
+   software usage instructions, support instructions, contributing manual for
+   hackers and high-level code organisation, security aspects
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :maxdepth: 2
+
+   doc/security/security

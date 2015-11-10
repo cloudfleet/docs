@@ -6,7 +6,7 @@ Written in [reStructuredText](http://sphinx-doc.org/rest.html) and built using
 
 Setup
 
-    pip install sphinx sphinx-autobuild
+    pip install -r requirements.txt
 
 Build locally
 
