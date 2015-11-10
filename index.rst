@@ -23,8 +23,8 @@ Quick Start:
 .. toctree::
    :maxdepth: 2
 
-   doc/quickstart/quickstart
-   doc/quickstart/quickstart-hackers
+   doc/quickstart/quickstart.md
+   doc/quickstart/quickstart-hackers.md
 
 Documentation:
 
@@ -35,4 +35,4 @@ Documentation:
 .. toctree::
    :maxdepth: 2
 
-   doc/security/security
+   doc/security/security.md
