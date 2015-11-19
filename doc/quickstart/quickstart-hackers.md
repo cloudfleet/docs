@@ -66,6 +66,14 @@ In Linux, run:
 
     ./scripts/format_usbs.sh <key device> <storage device>
 
+`<key device>` and `<storage device>` refer to the block level storage
+devices (e.g. `/dev/sda/`) not partitions (e.g. `/dev/sda1`).  If one
+has mounted filesystems from these devices at the runtime of the
+`format_usbs.sh` script it will fail.  For example, the following
+script umount all filesystems from the `/dev/sda` device:
+
+    for fs in $(mount -l | grep /dev/sda | awk -e '{print $1}'); do umount $fs; done 
+
 Plug the USB devices into the device.
 
 (on the next reboot the devices will be set up for our LUKS encrypted
