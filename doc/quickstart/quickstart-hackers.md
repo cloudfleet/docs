@@ -44,16 +44,19 @@ Steps to set up a custom domain with a new Cubox:
 
 ## Prepare the Blimp's SD card
 
-TODO: Explain how to burn the "golden image" with a
-[link](https://github.com/cloudfleet/blimp#blimp) to a detailed
-explanation on how to run Ansible playbooks to explicitly install everything
-(for transparency and reproducibility) on a vanilla Debian Linux.
+TODO: Explain how to burn the "golden image".
+
+If you want to setup everything on a Debian Linux from scratch
+(for transparency or you maybe want to use an existing server),
+follow [the detailed explanation](debian.html)
+of how to run Ansible playbooks to install everything.
 
 TODO: add the OTP somehow
 
 ## Prepare the key and storage USB devices
 
-Also in the blimp repository, in the *scripts* folder is a script to format two
+In the [blimp repository](https://github.com/cloudfleet/blimp),
+in the *scripts* folder is a script to format two
 USB devices with correct labels. It expects a key device path (e.g. /dev/sda)
 and a storage device path (e.g. /dev/sdb) **Warning: running this script on the
 provided devices will erase all data on them. Be sure to back up everything
@@ -67,3 +70,11 @@ Plug the USB devices into the device.
 
 (on the next reboot the devices will be set up for our LUKS encrypted
 partition scheme)
+
+This script is also available on the Blimp itself (if you ssh into it) and can
+be run as:
+
+    /opt/cloudfleet/engineroom/bin/cryptpart/wipe_disks.sh <key device> <storage device>
+
+(typically, on the blimp, the 1st USB you plug in will be /dev/sda
+and the 2nd /dev/sdb, to help you visually distinguish them)
