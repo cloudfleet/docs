@@ -36,5 +36,3 @@ Documentation:
    :maxdepth: 2
 
    doc/technology/technology.md
-   .. Optional purely-security-related information
-   .. doc/security/security.md
