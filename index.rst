@@ -35,4 +35,6 @@ Documentation:
 .. toctree::
    :maxdepth: 2
 
-   doc/security/security.md
+   doc/technology/technology.md
+   .. Optional purely-security-related information
+   .. doc/security/security.md
