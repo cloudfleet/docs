@@ -8,14 +8,19 @@ CloudFleet consists of three main components:
 - CloudFleet services - a set of online services we provide to make the setup
 and usage of your Blimp easy and safe
 
-You can get a pre-packaged CloudFleet Blimp from us or you can install the Blimp
-on your own hardware or VM.
-
 ## Hardware
+
+You can get a pre-packaged CloudFleet Blimp from us or you can setup
+your own hardware or VM as a Blimp. When you purchase your Blimp from us you
+get this device that you just plug into your router and power and it is
+ready for use:
+
+![The CloudFleet Blimp photo](img/blimp.jpg)
 
 Hardware changes fast, so it's possible that these specs might change soon,
 but this is the current hardware overview.
-The main hardware platform supported for our Blimp is a Raspberry Pi 2 Model B.
+The main hardware platform offered as the CloudFleet Blimp (and supported for
+those who want to "build their own lightsaber") is a Raspberry Pi 2 Model B.
 The machine's specification is:
 
 - 900MHz quad-core ARM Cortex-A7 CPU
@@ -35,9 +40,30 @@ you would like to add support for some other hardware platforms.
 
 ## Software
 
+In a way, the CloudFleet Blimp is your personal data center
+and the Blimp software includes all the web applications being
+served from this data center to you.
+
 ### Openness
 
-Explain the open source part, the license, transparency.
+All of the CloudFleet Blimp software is open source. This is a precondition
+for security – if you cannot inspect the code that is manipulating your data,
+how can you be sure what is it doing with it? It is of course not necessary for
+every person to inspect the source code, but the possibility of willing people
+being able to do so is a huge step forward in ensuring transparency and openness
+of CloudFleet as a privacy-protecting cloud platform.
+
+All of the software that we develop that is running on the Blimp is open source
+and licensed under the
+[GNU AGPLv3 license](https://www.gnu.org/licenses/agpl-3.0.html).
+
+![AGPLv3 logo](img/agplv3-155x51.png)
+
+CloudFleet is also all about bringing you the best of the open source world
+in an easy-to-use device. It includes existing open source code such as:
+
+- the Debian GNU/Linux OS - GNU GPL
+- Mailpile - GNU AGPLv3 the Explain the open source part, the license, transparency.
 
 ### Architecture
 
@@ -98,6 +124,9 @@ optional.
 - explain the CloudFleet services on a high level and why we charge for them
 
 - domain registration
-- software upgrades & security patches
+- software upgrades & security patches (via GitHub and
+  our private Docker registry)
 - pagekite for global access
 - zero-knowledge backups
+- public-IP mail relay for white-listed email transport (mail servers from
+  dynamic IP addresses are often blacklisted as spam by other mail providers)
