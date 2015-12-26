@@ -59,15 +59,40 @@ and licensed under the
 
 ![AGPLv3 logo](img/agplv3-155x51.png)
 
-CloudFleet is also all about bringing you the best of the open source world
-in an easy-to-use device. It includes existing open source code such as:
+CloudFleet is all about bringing you the best of the open source world
+in an easy-to-use device. Our first approach is to always use existing solutions
+if they fit our requirements. Naturally, your Blimp includes existing
+open source code such as:
 
-- the Debian GNU/Linux OS - GNU GPL
-- Mailpile - GNU AGPLv3 the Explain the open source part, the license, transparency.
+- Debian GNU/Linux OS
+- [Mailpile](https://www.mailpile.is/)
+- Pagekite
+- cryptsetup
+- Docker
+- AngularJS
+- ...
+
+We strive to participate in the open source community and collaborate with other
+project developers, submit issues, discuss solutions and contribute patches
+as much as we can.
 
 ### Architecture
 
-Explain the general architecture with Docker containers for automatic upgrades.
+From a high level, the CloudFleet Blimp consists of the base Linux running
+certain "bare metal" programs (e.g. cryptsetup for disk encryption) and a Docker
+daemon that drives the majority of the software components as Docker containers.
+
+The use of Docker containers allows for uniform and automatic upgrades of all
+the software components, no matter what their internal technology is.
+For example, some of the containers include [Mailpile](https://www.mailpile.is/)
+written in Python or the Blimp [Cockpit](github.com/cloudfleet/blimp-cockpit)
+(web dashboard) written as a JavaScript app and they are both
+upgraded in the same way by pulling in newer versions of the Docker images
+built from the open GitHub repositories and published in our private ARM Docker
+registry *marina.io* that we provide as part of the
+[CloudFleet services](#cloudfleet-services).
+
+This containerized architecture is illustrated in the following diagram:
 
 ![architecture diagram](img/architecture.png)
 
@@ -125,7 +150,7 @@ optional.
 
 - domain registration
 - software upgrades & security patches (via GitHub and
-  our private Docker registry)
+  our private ARM Docker registry *marina.io*
 - pagekite for global access
 - zero-knowledge backups
 - public-IP mail relay for white-listed email transport (mail servers from
