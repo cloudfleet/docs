@@ -65,8 +65,8 @@ if they fit our requirements. Naturally, your Blimp includes existing
 open source code such as:
 
 - Debian GNU/Linux OS
-- [Mailpile](https://www.mailpile.is/)
-- Pagekite
+- [Mailpile][mailpile]
+- [Pagekite][pagekite]
 - cryptsetup
 - Docker
 - AngularJS
@@ -79,13 +79,14 @@ as much as we can.
 ### Architecture
 
 From a high level, the CloudFleet Blimp consists of the base Linux running
-certain "bare metal" programs (e.g. cryptsetup for disk encryption) and a Docker
+certain ["bare metal" programs][engineroom]
+(e.g. cryptsetup for disk encryption) and a Docker
 daemon that drives the majority of the software components as Docker containers.
 
 The use of Docker containers allows for uniform and automatic upgrades of all
 the software components, no matter what their internal technology is.
 For example, some of the containers include [Mailpile](https://www.mailpile.is/)
-written in Python or the Blimp [Cockpit](github.com/cloudfleet/blimp-cockpit)
+written in Python or the Blimp [Cockpit][cockpit]
 (web dashboard) written as a JavaScript app and they are both
 upgraded in the same way by pulling in newer versions of the Docker images
 built from the open GitHub repositories and published in our private ARM Docker
@@ -155,3 +156,9 @@ optional.
 - zero-knowledge backups
 - public-IP mail relay for white-listed email transport (mail servers from
   dynamic IP addresses are often blacklisted as spam by other mail providers)
+
+[engineroom]: https://github.com/cloudfleet/blimp-engineroom "blimp-engineroom"
+[cryptpart]: https://github.com/cloudfleet/blimp-engineroom/tree/master/bin/cryptpart "cryptpart"
+[cockpit]: https://github.com/cloudfleet/blimp-cockpit  "blimp-cockpit"
+[mailpile]: https://www.mailpile.is/ "Mailpile"
+[pagekite]: http://pagekite.net/ "Pagekite"

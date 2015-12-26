@@ -12,7 +12,7 @@ automatically)**
 
 ## Order a CloudFleet service subscription
 
-Go to <https://cloudfleet.io/order.html>, fill out your domain info.
+Go to <https://cloudfleet.io/>, fill out your domain info.
 
 TODO: allow the upload of a OTP (or allow downloading of a random OTP and
 allow for e.g. a device labeled cf-otp to be
@@ -72,7 +72,7 @@ has mounted filesystems from these devices at the runtime of the
 `format_usbs.sh` script it will fail.  For example, the following
 script umount all filesystems from the `/dev/sda` device:
 
-    for fs in $(mount -l | grep /dev/sda | awk -e '{print $1}'); do umount $fs; done 
+    for fs in $(mount -l | grep /dev/sda | awk -e '{print $1}'); do umount $fs; done
 
 Plug the USB devices into the device.
 
