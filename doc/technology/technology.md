@@ -37,7 +37,7 @@ Additional components that we package with the Blimp are:
 
 - Custom case with CloudFleet branding
 - 8 GB boot Micro SD card
-- 16 GB storage USB
+- 32 GB storage USB
 - Encryption USB key
 - Ethernet & power cables
 
