@@ -7,6 +7,10 @@ open [an issue](https://github.com/cloudfleet/docs) or tell us about it on
 [our forum](https://discourse.cloudfleet.io).
 We'd love to get feedback from you!
 
+Also, we're currently running a crowdfunding campaign to support
+the development of this software and offere preorders of packaged
+devices, so be sure to check it out on [IndieGoGo](https://www.indiegogo.com/projects/cloudfleet-your-private-encrypted-cloud-at-home/x/4096670#/)!
+
 Using CloudFleet consists of three main components:
 
 - the Blimp hardware - a physical machine used as your Blimp
